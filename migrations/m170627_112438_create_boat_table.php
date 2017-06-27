@@ -19,8 +19,8 @@ class m170627_112438_create_boat_table extends Migration
             'boat_name' => Schema::TYPE_STRING
         ]);
         
-        $this->insert("boat", ["boat_id" => 1,"boat_imo" => 123456789, "boat_name" => "De Marius" ]);
-        
+      /**  $this->insert("boat", ["boat_id" => 1,"boat_imo" => 123456789, "boat_name" => "De Marius" ]);
+        */
     }
 
     /**
