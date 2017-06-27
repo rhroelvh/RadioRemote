@@ -5,7 +5,10 @@ use yii\db\Migration;
 /**
  * Handles the creation of table `device`.
  */
-class m170627_111845_create_device_table extends Migration {
+class m170627_112438_create_device_table extends Migration
+{
+    
+
     /*
      * Class vars
      */
@@ -27,8 +30,6 @@ class m170627_111845_create_device_table extends Migration {
 
         //add foreignkey for device_idBoat
         $this->addForeignKey(self::$device_idBoat_FK1, 'device', 'device_idBoat', 'boat', 'boat_id');
-
-
     }
 
     /**

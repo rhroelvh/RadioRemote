@@ -25,8 +25,6 @@ class m170627_113500_create_switch_table extends Migration {
 
         //add foreignKey
         $this->addForeignKey(self::$switch_deviceId_FK1, 'switch', 'switch_deviceID', 'device', 'device_id');
-
-
     }
 
     /**

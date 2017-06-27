@@ -6,7 +6,7 @@ use yii\db\Schema;
 /**
  * Handles the creation of table `boat`.
  */
-class m170627_112438_create_boat_table extends Migration
+class m170627_111845_create_boat_table extends Migration
 {
     /**
      * create table boat
