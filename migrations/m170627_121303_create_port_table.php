@@ -15,23 +15,23 @@ class m170627_121303_create_port_table extends Migration {
      * @inheritdoc
      */
     public function up() {
-        $this->createTable('port', [
-            'port_id' => $this->primaryKey(),
-            'port_switchID' => $this->integer(),
-            'port_speed' => $this->integer(),
-            'port_description' => $this->string(),
+        $this->createTable('switchPort', [
+            'switchPort_id' => $this->primaryKey(),
+            'switchPort_switchId' => $this->integer(),
+            'switchPort_speed' => $this->integer(),
+            'switchPort_description' => $this->string()
         ]);
 
         //add foreignKey
-        $this->addForeignKey(self::$port_switchId_FK1, 'port', 'port_switchId', 'switch', 'switch_id');
+        $this->addForeignKey(self::$port_switchId_FK1, 'switchPort', 'switchPort_switchId', 'switch', 'switch_id');
     }
 
     /**
      * @inheritdoc
      */
     public function down() {
-        $this->truncateTable('portData');
-        $this->dropTable('port');
+        $this->truncateTable('switchPort');
+        $this->dropTable('switchPort');
     }
 
 }
