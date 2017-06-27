@@ -5,7 +5,7 @@ use yii\db\Migration;
 /**
  * Handles the creation of table `device`.
  */
-class m170627_111845_create_device_table extends Migration
+class m170627_112438_create_device_table extends Migration
 {
     
     /*
@@ -30,8 +30,8 @@ class m170627_111845_create_device_table extends Migration
             $this->addForeignKey(self::$device_idBoat_FK1, 'device', 'device_idBoat', 'boat', 'boat_id');
         
         //add some data
-            $this->insert('device', ["device_id"=>1, "device_idBoat" => 123456789, "device_manufacturer" => "Cisco", "device_model" => "Catalyst 2960"]);
-            $this->insert('device', ["device_id"=>2, "device_idBoat" => 123456789, "device_manufacturer" => "HP", "device_model" => "SuperSwitch 3000x"]);
+            //$this->insert('device', ["device_id"=>1, "device_idBoat" => 123456789, "device_manufacturer" => "Cisco", "device_model" => "Catalyst 2960"]);
+            //$this->insert('device', ["device_id"=>2, "device_idBoat" => 123456789, "device_manufacturer" => "HP", "device_model" => "SuperSwitch 3000x"]);
     }
 
     /**

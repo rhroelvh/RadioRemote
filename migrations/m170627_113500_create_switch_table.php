@@ -27,8 +27,8 @@ class m170627_113500_create_switch_table extends Migration {
         $this->addForeignKey(self::$switch_deviceId_FK1, 'switch', 'switch_deviceID', 'device', 'device_id');
 
         //add some data
-        $this->insert("switch", ["switch_deviceID" => 1, "switch_ip" => "192.168.0.1"]);
-        $this->insert("switch", ["switch_deviceID" => 2, "switch_ip" => "192.168.0.2"]);
+//        $this->insert("switch", ["switch_deviceID" => 1, "switch_ip" => "192.168.0.1"]);
+ //       $this->insert("switch", ["switch_deviceID" => 2, "switch_ip" => "192.168.0.2"]);
     }
 
     /**
