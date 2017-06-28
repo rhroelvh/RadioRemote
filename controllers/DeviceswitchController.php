@@ -2,12 +2,13 @@
 
 namespace app\controllers;
 
-use Yii;
+use app\models\Device;
 use app\models\Deviceswitch;
 use app\models\DeviceswitchSearch;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * DeviceswitchController implements the CRUD actions for Deviceswitch model.
@@ -120,5 +121,13 @@ class DeviceswitchController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+    
+    
+    public function actionDevicejson(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $devices = Device::find()->all();
+        return $devices;
+        
     }
 }
